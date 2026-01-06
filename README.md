@@ -2,6 +2,27 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
 
+## Introduction 
+This project tracks a list of tasks. Also Project demonstrates two clean aproaches for managing application state in angular based projects. 
+The project make it easier to switch between the two approaches.
+
+## Simple State Management 
+TaskService class manages the Global Task State and exposes its state slices as readonly angular signals. This ensures application remain reactive as well 
+as maintaining a single source of truth for application state. To use Simple State Management Inject TaskService in target component.
+
+## Ngrx Store State Managemnt 
+This uses Ngrx store  state management. To use this approache Inject TaskNgrxService class in the target component.
+
+## Demo 
+For testing  purposes, the application is configured to communicate with Angular In-Memory Web Api. This simulates application interaction with external 
+world.
+
+## Prerequisites 
+Run these commands to install required dependencies 
+ng add @ngrx/store@20
+ng add @ngrx/effects@20
+npm install angular-in-memory-web-api@0.20
+
 ## Development server
 
 To start a local development server, run:
@@ -20,11 +41,6 @@ Angular CLI includes powerful code scaffolding tools. To generate a new componen
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
 
 ## Building
 
@@ -36,24 +52,5 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
