@@ -6,6 +6,21 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 This project tracks a list of tasks. Also Project demonstrates two clean aproaches for managing application state in angular based projects. 
 The project make it easier to switch between the two approaches.
 
+## Folder Structure 
+
+```text
+src/
+├── app/
+|   ├── store          # App state 
+│   ├── core/          # Singletons, interceptors, guards
+│   ├── tasks/         # Feature module (tasks)
+│   │   ├── data/      # Models, services, store
+│   │   ├── ui/        # Dumb / presentational components
+│   │   └── pages/     # Smart / routed components
+│   └── app.config.ts
+├── assets/
+└── main.ts
+```
 ## Simple State Management 
 TaskService class manages the Global Task State and exposes its state slices as readonly angular signals. This ensures application remain reactive as well 
 as maintaining a single source of truth for application state. To use Simple State Management Inject TaskService in target component.
