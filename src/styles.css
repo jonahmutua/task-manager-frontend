@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/** Snackbar ****/
+/* Snackbar container */
+.mat-mdc-snack-bar-container.tm-snackbar .mdc-snackbar__surface {
+  background-color: #f2f2f2 !important;
+  color: #333 !important;
+  border-radius: 8px ;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/*Snackbar Error variant */
+.mat-mdc-snack-bar-container.tm-snackbar-error .mdc-snackbar__surface {
+  background-color: #f2f2f2 !important;
+  /*border-left: 4px solid #d32f2f;*/
+}
+

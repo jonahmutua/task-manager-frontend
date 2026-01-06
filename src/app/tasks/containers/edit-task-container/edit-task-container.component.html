@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header class="card-header-center">
+        <mat-card-title>{{ taskFormTitleLabel() }}</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+        <tm-task-form
+            [form]="taskForm()"
+            (save)="onSave($event)"
+            (cancel)="onCancel()">
+        </tm-task-form>
+    </mat-card-content>
+</mat-card>

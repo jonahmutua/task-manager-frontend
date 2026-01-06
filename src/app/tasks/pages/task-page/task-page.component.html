@@ -1,0 +1,19 @@
+<div class="task-grid">
+    <div class="task-edit scrollable">
+        <tm-edit-task-container 
+            [mode]="formMode()"
+            [task]="selectedTask()" 
+            (save)="handleSave($event)" 
+            (cancel)="handleCancel()">
+        </tm-edit-task-container>
+    </div>
+
+    <!-- Task List -->
+    <div class="task-list scrollable">
+        <tm-task-list-container 
+            [tasks]="tasks()" 
+            (editTask)="handleEditTask($event)" 
+            (deleteTask)="handleDeleteTask($event)">    
+        </tm-task-list-container>
+    </div>
+</div>

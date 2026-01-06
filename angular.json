@@ -5,10 +5,15 @@
   "projects": {
     "task-manager": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+            "type": "component",
+           "standalone": true 
+          }
+      },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "tm",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -22,6 +27,7 @@
               }
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ]
           },

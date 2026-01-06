@@ -1,0 +1,14 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

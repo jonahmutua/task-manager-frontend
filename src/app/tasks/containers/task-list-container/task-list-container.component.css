@@ -1,0 +1,10 @@
+.card-header-center {    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}     
+
+.card-header-center mat-card-title {    
+    font-size: 1.5rem;
+    font-weight: 600;
+}

@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-header class="card-header-center">
+        <mat-card-title>Tasks List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div >
+            @for( task of tasks(); track task.id) {
+                <tm-task-item [task]="task" 
+                    (editTask)="handleEditTask($event)" 
+                    (deleteTask)="handleDeleteTask($event)">
+                </tm-task-item>
+            }
+        </div>
+    </mat-card-content>
+</mat-card>

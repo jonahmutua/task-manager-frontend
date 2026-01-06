@@ -1,0 +1,20 @@
+<!-- task-item.component.html -->
+<div class="task-item">
+  <!-- Row 1: Status bar -->
+  <div class="task-bar">
+    <div class="status-indicator" [ngClass]="task().status"></div>
+    <span class="status-text">{{ task().status | titlecase }}</span>
+  </div>
+
+  <!-- Row 2: Title -->
+  <h1 class="task-title" [class.completed]="task().status === 'completed'">{{ task().title }}</h1>
+
+  <!-- Row 3: Description -->
+  <p class="task-description" [class.completed]="task().status === 'completed'">{{ task().description }}</p>
+
+  <!-- Row 4: Actions --> 
+  <div class="task-actions">
+    <button mat-icon-button color="primary" (click)="onEdit()"> <mat-icon>edit</mat-icon> </button>
+    <button mat-icon-button color="warn" (click)="onDelete()"> <mat-icon>delete</mat-icon> </button>
+  </div>
+</div>

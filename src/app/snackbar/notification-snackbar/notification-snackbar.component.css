@@ -1,0 +1,28 @@
+.snackbar-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333; 
+}
+
+.snackbar-icon {
+  font-size: 22px;
+}
+
+.snackbar-message {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Info (default) */
+.snackbar-content.info .snackbar-icon {
+  color: #1976d2; /* Material blue */
+}
+
+/* Error */
+.snackbar-content.error {
+    color: #d32f2f;
+}
+.snackbar-content.error .snackbar-icon {
+  color: #d32f2f; /* Material red */
+}

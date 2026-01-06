@@ -1,0 +1,32 @@
+.task-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    height: 70vh;
+    margin: 2rem;
+}
+
+@media (max-width: 720px) {
+    .task-grid {
+       grid-template-columns: 1fr;
+    }
+}
+
+.task-grid mat-card {
+    box-shadow: none !important;
+}
+
+.task-grid .task-edit,  
+.task-grid .task-list {
+    border-radius: 8px;
+    border: solid 1px black;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.task-grid .scrollable {
+    flex: 1;
+    overflow-y: auto;
+}

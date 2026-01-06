@@ -1,0 +1,7 @@
+  <div class="snackbar-content" [class.info]="data.type === 'info'" [class.error]="data.type === 'error'">
+      <mat-icon class="snackbar-icon">
+        {{ data.type === 'error' ? 'warning' : 'notifications' }}
+      </mat-icon>
+
+      <span class="snackbar-message">{{ data.message }}</span>
+</div>

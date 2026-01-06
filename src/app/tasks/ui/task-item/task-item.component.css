@@ -1,0 +1,69 @@
+.task-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}   
+
+/* Row 1: bar */
+.task-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.status-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* Status colors */
+.status-indicator.pending {
+  background-color: orange;
+}
+.status-indicator.in-progress {
+  background-color: blue;
+}
+.status-indicator.completed {
+  background-color: green;
+}
+.status-indicator.cancelled {
+  background-color: red;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999; 
+}
+
+.status-text {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Row 2: title */
+.task-title {
+  margin: 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Row 3: description */
+.task-description {
+  margin: 0;
+  color: #666;
+}
+
+.task-actions {
+     display: flex; 
+     gap: 0.5rem; 
+     justify-content: flex-end; 
+}
