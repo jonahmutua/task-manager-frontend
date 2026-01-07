@@ -49,6 +49,36 @@
   color: #555;
 }
 
+.priority {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 2px; 
+  font-weight: 500;
+  line-height: 1;  
+  padding: 0px 6px; 
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.priority mat-icon {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+}
+
+.priority.low {
+  background: green;
+  color: white;  
+}
+.priority.medium {
+  background: orange;
+  color: white;  
+}
+.priority.high {
+  background: var(--app-danger);
+  color: white;  
+}
 /* Row 2: title */
 .task-title {
   margin: 0.25rem 0;
@@ -66,4 +96,12 @@
      display: flex; 
      gap: 0.5rem; 
      justify-content: flex-end; 
+}
+
+.task-actions .edit-btn mat-icon {
+  color: var(--mat-sys-primary);
+}
+
+.task-actions .delete-btn mat-icon {
+  color: var(--app-danger)
 }

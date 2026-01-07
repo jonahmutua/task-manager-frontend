@@ -1,10 +1,54 @@
-.card-header-center {    
+
+/* card-header-center */
+
+.no-shadow-card mat-card-header {    
     display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 8px 8px;
+    border: 1px solid var(--mat-sys-secondary);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }     
 
 .card-header-center mat-card-title {    
     font-size: 1.5rem;
     font-weight: 600;
+
 }
+
+.status-container {
+    display: flex;
+}
+
+.fab-clean {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    border: none;
+    background: var(--mat-system-on-surface);
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    background: var(--mat-sys-primary);
+    border-radius: 5px;
+    margin-left: 20px;
+    color: white;
+    font-style: italic;
+    padding: 0px 5px;
+    font-weight: 400;
+
+}
+.status.pending {
+    background: var(--mat-sys-secondary);
+}
+
+.task-item {
+    border: solid 1px var(--mat-sys-secondary);
+    margin: 0.8rem;
+    border-radius: 6px;
+    
+}
+

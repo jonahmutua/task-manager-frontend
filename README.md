@@ -3,7 +3,7 @@
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
 
 ## Introduction 
-This project tracks a list of tasks. Also Project demonstrates two clean aproaches for managing application state in angular based projects. 
+This project tracks the progress a list of tasks. Also Project demonstrates two clean aproaches for managing application state in angular based projects. 
 The project make it easier to switch between the two approaches.
 
 ## Folder Structure 

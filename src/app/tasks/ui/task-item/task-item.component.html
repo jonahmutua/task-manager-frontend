@@ -2,8 +2,17 @@
 <div class="task-item">
   <!-- Row 1: Status bar -->
   <div class="task-bar">
+    <!-- Progress -->
     <div class="status-indicator" [ngClass]="task().status"></div>
     <span class="status-text">{{ task().status | titlecase }}</span>
+
+    <!--Priority-->
+    <div>
+      <span class="priority high">
+        <mat-icon>warning</mat-icon>
+        High
+      </span>
+    </div>
   </div>
 
   <!-- Row 2: Title -->
@@ -14,7 +23,7 @@
 
   <!-- Row 4: Actions --> 
   <div class="task-actions">
-    <button mat-icon-button color="primary" (click)="onEdit()"> <mat-icon>edit</mat-icon> </button>
-    <button mat-icon-button color="warn" (click)="onDelete()"> <mat-icon>delete</mat-icon> </button>
+    <button matIconButton class="edit-btn" (click)="onEdit()"> <mat-icon>edit</mat-icon> </button>
+    <button mat-icon-button class="delete-btn" (click)="onDelete()"> <mat-icon>delete</mat-icon> </button>
   </div>
 </div>

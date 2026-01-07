@@ -10,13 +10,14 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TaskFormModel } from '../../data/forms/task-form.model';
 import { TaskFormValue } from '../../data/forms/task-form.value';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'tm-task-form',
   standalone: true,
   templateUrl: './task-form.component.html',
   styleUrl: './task-form.component.css',
-  imports: [MatCardModule, MatListModule, MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatSelectModule, MatCheckboxModule, ReactiveFormsModule, MatInputModule],
+  imports: [MatCardModule, MatListModule, MatDatepickerModule, MatNativeDateModule, MatFormFieldModule, MatSelectModule, MatCheckboxModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
 })
 export class TaskFormComponent {
 

@@ -9,14 +9,29 @@
 html {
   @include mat.theme((
     color: (
-      primary: mat.$azure-palette,
+      primary: mat.$blue-palette,
+      secondary: mat.$green-palette,
       tertiary: mat.$blue-palette,
+      error: mat.$green-palette
     ),
     typography: Roboto,
-    density: 0,
+    density: -2,
   ));
+
+  @include mat.button-overrides((
+    filled-container-shape: var(--mat-sys-corner-full)
+  ));
+
+  // @include mat.fab-overrides((
+  //     extended-container-elevation-shadow: none,
+  // ))
 }
 
+// .fab-no-outline {
+//   @include mat.fab-overrides((
+//     --mat-fab-container-stroke-width: 0,
+//   ))
+// }
 
 body {
   // Default the application to a light color theme. This can be changed to

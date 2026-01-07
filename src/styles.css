@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* html, body { height: 100%; } */
+html, body {
+    height: 100%;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: var(--mat-sys-on-surface);
+    background: var(--mat-sys-surface);
+    margin: 0;
+}
+
+:root {
+    --app-danger: #ec1d1d;
+}
 
 /** Snackbar ****/
 /* Snackbar container */
@@ -18,3 +28,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   /*border-left: 4px solid #d32f2f;*/
 }
 
+/* Removes shadowbox on mat-card */
+.no-shadow-card {
+  --mat-card-elevated-container-elevation: none;
+}
