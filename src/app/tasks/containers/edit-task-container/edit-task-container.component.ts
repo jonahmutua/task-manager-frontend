@@ -50,7 +50,7 @@ export class EditTaskContainerComponent {
        title: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
        description: new FormControl( null ), 
        status: new FormControl('pending', { nonNullable: true }),
-       priority: new FormControl('Medium', {nonNullable: true}), 
+       priority: new FormControl('medium', {nonNullable: true}), 
        isActive: new FormControl( true, { nonNullable: true }), 
        dueDate: new FormControl( null),  
     });
@@ -63,7 +63,7 @@ export class EditTaskContainerComponent {
         title: '',
         description: null,
         status: 'pending',
-        priority: 'Medium',
+        priority: 'medium',
         isActive: true,
         dueDate: null,
       }

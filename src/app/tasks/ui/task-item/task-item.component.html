@@ -2,15 +2,18 @@
 <div class="task-item">
   <!-- Row 1: Status bar -->
   <div class="task-bar">
+    
     <!-- Progress -->
-    <div class="status-indicator" [ngClass]="task().status"></div>
-    <span class="status-text">{{ task().status | titlecase }}</span>
+    <div class="status" [ngClass]="progressConfig[status()].colorClass">
+      <mat-icon>{{ progressConfig[status()].icon}}</mat-icon>
+    </div>
+    <span class="status-text">{{ progressConfig[status()].label | titlecase }}</span>
 
     <!--Priority-->
     <div>
-      <span class="priority medium">
-        <mat-icon>warning</mat-icon>
-        High
+      <span class="priority" [ngClass]="priorityConfig[priority()].colorClass" >
+        <mat-icon>{{ priorityConfig[priority()].icon }}</mat-icon>
+        {{ priorityConfig[priority()].label }}
       </span>
     </div>
   </div>

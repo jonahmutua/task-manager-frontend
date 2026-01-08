@@ -11,6 +11,8 @@ import { TaskFormModel } from '../../data/forms/task-form.model';
 import { TaskFormValue } from '../../data/forms/task-form.value';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { TASK_PROGRESS_LABELS, TaskProgess } from '../../data/models/task-progress';
+import { TASK_PRIORITY_LABELS, TaskPriority } from '../../data/models/task-priority';
 
 @Component({
   selector: 'tm-task-form',
@@ -26,6 +28,9 @@ export class TaskFormComponent {
   save = output<TaskFormValue>();
   
   cancel = output<void>();
+
+  taskStatuses = Object.entries(TASK_PROGRESS_LABELS) as [TaskProgess, string][];
+  taskPriorities = Object.entries(TASK_PRIORITY_LABELS) as [TaskPriority, string][];
 
   onSave() {
     this.save.emit(this.form().getRawValue());

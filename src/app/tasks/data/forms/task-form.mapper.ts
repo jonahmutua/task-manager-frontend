@@ -8,7 +8,7 @@ export function mapTaskToFormModel(task: Task) : FormGroup<TaskFormModel> {
         title: new FormControl(task.title, { nonNullable: true }),
         description: new FormControl(task.description??  null),
         status: new FormControl(task.status, { nonNullable: true }),
-        priority: new FormControl(task.priority?? 'Medium', {nonNullable: true}),
+        priority: new FormControl(task.priority, {nonNullable: true}),
         isActive: new FormControl(task.isActive, { nonNullable: true }),
         dueDate: new FormControl(task.dueDate?? null),
     });         
@@ -23,7 +23,7 @@ export function mapFormValueToTask(formValue: TaskFormValue, existingTask: Task 
             title: formValue.title,
             description: formValue.description ?? undefined,
             priority: formValue.priority,
-            status: formValue.status?? 'pending',
+            status: formValue.status,
             dueDate: formValue.dueDate ?? undefined,
         
         }

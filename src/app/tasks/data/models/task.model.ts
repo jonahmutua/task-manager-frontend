@@ -1,9 +1,12 @@
+import { TaskPriority } from "./task-priority";
+import { TaskProgess } from "./task-progress";
+
 export interface Task {
   id?: string ;
   title: string;
   description?: string;
-  status: 'pending' | 'in-progress' | 'completed';
-  priority: 'Low' | 'Medium' | 'High';
+  status: TaskProgess;
+  priority: TaskPriority;
   dueDate?: Date;
   createdAt: Date;
   isActive: boolean;
@@ -16,3 +19,4 @@ export interface ITaskState {
     notification: string | null;
     error : string | null;
 }
+

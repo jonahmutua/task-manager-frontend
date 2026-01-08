@@ -16,6 +16,7 @@ export class MockDataService implements InMemoryDbService {
             title: 'develop task manager app',
             description: 'This is a sample task description.',
             status: 'pending',
+            priority: 'medium',
             isActive: true,
             createdAt: new Date(),
             dueDate: new Date()
@@ -25,6 +26,7 @@ export class MockDataService implements InMemoryDbService {
             title: 'Reafctor codebase',
             description: 'This is another task description.',
             status: 'in-progress',
+            priority: 'high',
             isActive: true,
             createdAt: new Date(),
             dueDate: new Date()
@@ -34,6 +36,7 @@ export class MockDataService implements InMemoryDbService {
             title: 'Write documentation',
             description: 'This is yet another task description.',
             status: 'completed',
+            priority: 'low',
             isActive: false,
             createdAt: new Date(),
             dueDate: new Date()     
