@@ -12,6 +12,7 @@
     <div class="task-list scrollable">
         <tm-task-list-container 
             [tasks]="tasks()" 
+            [taskStats]="taskStats()"
             (editTask)="handleEditTask($event)" 
             (deleteTask)="handleDeleteTask($event)">    
         </tm-task-list-container>

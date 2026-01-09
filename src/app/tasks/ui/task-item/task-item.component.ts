@@ -1,10 +1,10 @@
 import { Component, computed, EventEmitter, input, Input, output, Output, } from '@angular/core';
-import { Task } from '../../data/models/task.model';
+import {  Task } from '../../data/models/task.model';
 import { TASK_PRIORITY_CONFIG, TaskPriority } from '../../data/models/task-priority'
 import { CommonModule } from '@angular/common';
 import {MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { TASK_PROGRESS_CONFIG, TASK_PROGRESS_LABELS, TaskProgess } from '../../data/models/task-progress';
+import { TASK_PROGRESS_CONFIG, TaskProgess } from '../../data/models/task-progress';
 
 @Component({
   selector: 'tm-task-item',
@@ -17,6 +17,8 @@ import { TASK_PROGRESS_CONFIG, TASK_PROGRESS_LABELS, TaskProgess } from '../../d
 export class TaskItemComponent {
 
   task = input.required<Task>();
+  
+  
   editTask = output<Task>();
   deleteTask = output<Task>();
 

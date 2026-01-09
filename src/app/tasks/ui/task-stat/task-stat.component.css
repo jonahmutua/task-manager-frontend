@@ -1,0 +1,19 @@
+.status-container {
+    display: flex;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    background: var(--mat-sys-primary);
+    border-radius: 5px;
+    margin-left: 20px;
+    color: white;
+    font-style: italic;
+    padding: 0px 5px;
+    font-weight: 400;
+
+}
+.status.pending {
+    background: var(--mat-sys-secondary);
+}

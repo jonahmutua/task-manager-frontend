@@ -1,7 +1,7 @@
 import { Component, computed, DestroyRef, effect, inject, OnInit, Signal, signal } from '@angular/core';
 import { TaskService } from '../../data/services/task.service';
 import { TaskFormValue } from '../../data/forms/task-form.value';
-import { Task } from '../../data/models/task.model';
+import { ITaskStatistics, Task } from '../../data/models/task.model';
 import { EditTaskContainerComponent } from "../../containers/edit-task-container/edit-task-container.component";
 import { TaskFormMode } from '../../data/forms/task-form.mode';
 import { TaskListContainerComponent } from "../../containers/task-list-container/task-list-container.component";
@@ -10,7 +10,7 @@ import { SnackBarService } from '../../../snackbar/snackbar.service';
 import { TaskNgrxService } from '../../data/services/task.ngrx.service';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/app.state';
-import { selectError, selectNotification, selectTasks } from '../../data/store/selectors';
+import { selectError, selectNotification, selectTasks, selectTaskStats } from '../../data/store/selectors';
 import * as TaskActions from "../../data/store/actions"
 import { catchError, tap, throwError } from 'rxjs';
 
@@ -39,10 +39,11 @@ export class TaskPageComponent implements OnInit {
 	tasks = this.store.selectSignal(selectTasks);
 	notification = this.store.selectSignal( selectNotification);
 	error = this.store.selectSignal(selectError);
-
+	taskStats = this.store.selectSignal(selectTaskStats);
 
 	private selectedTaskState = signal<Task | null>(null);
 	selectedTask = computed(() => this.selectedTaskState());
+
 
 
 	private formModeState = signal<TaskFormMode>('create');

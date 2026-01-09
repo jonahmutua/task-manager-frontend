@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -6,7 +6,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TaskFormModel } from '../../data/forms/task-form.model';
 import { TaskFormValue } from '../../data/forms/task-form.value';
 import { MatInputModule } from '@angular/material/input';
@@ -29,8 +29,13 @@ export class TaskFormComponent {
   
   cancel = output<void>();
 
-  taskStatuses = Object.entries(TASK_PROGRESS_LABELS) as [TaskProgess, string][];
-  taskPriorities = Object.entries(TASK_PRIORITY_LABELS) as [TaskPriority, string][];
+  readonly taskStatuses = Object.entries(TASK_PROGRESS_LABELS).map( ([value, label]) =>
+    ({value, label})
+  ) as readonly { value: TaskProgess; label: string}[];
+
+  readonly taskPriorities = Object.entries(TASK_PRIORITY_LABELS).map(([value, label]) => 
+    ({value, label})
+  ) as readonly {value: TaskPriority; label: string}[];
 
   onSave() {
     this.save.emit(this.form().getRawValue());

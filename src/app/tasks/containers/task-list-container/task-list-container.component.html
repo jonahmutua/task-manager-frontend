@@ -1,23 +1,17 @@
 <mat-card class="no-shadow-card">
     <mat-card-header>
         <mat-card-title>
-            <button matFab extended class="fab-clean">
+            <button matFab  class="fab-clean">
                 <mat-icon>menu</mat-icon>
-                <span>Task List</span>
             </button>
+            <span>Task List</span>
         </mat-card-title>
 
         <!-- task status stats -->
-        <div class="status-container">
-            <span class="status">
-                <mat-icon>access_time</mat-icon>
-                1/5 completed
-            </span> 
-            <span class="status pending">
-                <mat-icon>access_time</mat-icon>
-                5 pending
-            </span>
-        </div>        
+        <tm-task-stat 
+            [taskStats]="taskStats()">
+        </tm-task-stat>
+
     </mat-card-header>
 
     <!-- Task List -->

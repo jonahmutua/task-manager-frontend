@@ -20,3 +20,9 @@ export interface ITaskState {
     error : string | null;
 }
 
+export interface ITaskStatistics {
+  total: number; 
+  active: number;         /* tasks whose status is either 'pending' or 'in-progress' */
+  completed: number;      /* tasks whose status is 'completed' */
+}
+

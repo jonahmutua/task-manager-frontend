@@ -1,0 +1,10 @@
+<div class="status-container">
+    <span class="status">
+        <mat-icon>checked_circle</mat-icon>
+        {{ `${taskStats().completed}/${taskStats().total}` }} completed
+    </span> 
+    <span class="status pending">
+        <mat-icon>access_time</mat-icon>
+        {{ `${taskStats().active}` }} active
+    </span>
+</div>
