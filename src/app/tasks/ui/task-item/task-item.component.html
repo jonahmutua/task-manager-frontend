@@ -25,8 +25,20 @@
   <p class="task-description" [class.completed]="task().status === 'completed'">{{ task().description }}</p>
 
   <!-- Row 4: Actions --> 
-  <div class="task-actions">
-    <button matIconButton class="edit-btn" (click)="onEdit()"> <mat-icon>edit</mat-icon> </button>
-    <button mat-icon-button class="delete-btn" (click)="onDelete()"> <mat-icon>delete</mat-icon> </button>
+  <div class="timeline-container">
+    <div class="timeline">
+      
+        <mat-icon>event</mat-icon>
+        <span>Created: {{task().createdAt| date:'dd/MM/yyyy'}}</span>
+  
+        <mat-icon>event</mat-icon>
+        <span>Due: {{task().dueDate | date:'dd/MM/yyyy'}}</span>
+      
+     
+    </div> 
+    <div class="task-actions">
+      <button matIconButton class="edit-btn" (click)="onEdit()"> <mat-icon>edit</mat-icon> </button>
+      <button mat-icon-button class="delete-btn" (click)="onDelete()"> <mat-icon>delete</mat-icon> </button>
+    </div>
   </div>
 </div>

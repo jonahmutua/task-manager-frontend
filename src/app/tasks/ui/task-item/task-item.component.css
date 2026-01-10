@@ -102,6 +102,27 @@
   color: #666;
 }
 
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timeline {
+  display: inline-flex;
+}
+
+.timeline mat-icon {
+  font-size: 18px;
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+.timeline span {
+  margin-right: 0.5rem;
+}
+
 .task-actions {
      display: flex; 
      gap: 0.5rem; 
